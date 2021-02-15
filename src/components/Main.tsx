@@ -15,10 +15,10 @@ const CLIENT_SECRET = '0d5ed981f1e024e5a0e6e0e5e9ffa73d1fb1afc7';
 const Main: React.FC = () => {
   const history = useHistory();
   const [accessToken, setAccessToken] = useState({});
-  const getGitHubAccessToken = useCallback(async () => {
+  const getGitHubAccessToken = async (body: { [key: string]: any }) => {
     const res = await axios.post('http://3.34.194.121:8000/oauth/', body);
     return res.data;
-  }, []);
+  };
   const body = useMemo(
     () => ({
       ...toParams(history.location.search),
@@ -29,10 +29,10 @@ const Main: React.FC = () => {
   );
 
   useEffect(() => {
-    getGitHubAccessToken().then(res => {
+    getGitHubAccessToken(body).then(res => {
       setAccessToken(res);
     });
-  }, []);
+  }, [body]);
 
   return (
     <>
