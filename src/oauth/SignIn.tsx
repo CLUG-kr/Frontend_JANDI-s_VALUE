@@ -20,7 +20,6 @@ const SignIn: React.FC<Partial<ISignInProps>> = ({
       scope,
       redirect_uri: redirectUri,
     });
-    alert(`https://github.com/login/oauth/authorize?${search}`);
     window.location.href = `https://github.com/login/oauth/authorize?${search}`;
   }, []);
 
