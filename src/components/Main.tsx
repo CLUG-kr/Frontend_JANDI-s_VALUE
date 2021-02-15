@@ -7,7 +7,7 @@ import ReactJson from 'react-json-view';
 
 const SignInData: Partial<ISignInProps> = {
   clientId: '0b05ada88d3a8667fccf',
-  redirectUri: 'http://localhost:3000/oauth_redirect',
+  redirectUri: 'https://frontend-jandi-s-value.vercel.app/oauth_redirect',
 };
 
 const CLIENT_SECRET = '0d5ed981f1e024e5a0e6e0e5e9ffa73d1fb1afc7';
