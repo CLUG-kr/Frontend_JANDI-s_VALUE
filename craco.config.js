@@ -1,5 +1,5 @@
-// eslint-disable-next-line @typescript-eslint/no-var-requires
 const CracoAlias = require('craco-alias');
+const CracoLessPlugin = require('craco-less');
 
 module.exports = {
   plugins: [
@@ -8,6 +8,17 @@ module.exports = {
       options: {
         source: 'tsconfig',
         tsConfigPath: 'tsconfig.path.json',
+      },
+    },
+    {
+      plugin: CracoLessPlugin,
+      options: {
+        lessLoaderOptions: {
+          lessOptions: {
+            modifyVars: { '@primary-color': '#22C164' },
+            javascriptEnabled: true,
+          },
+        },
       },
     },
   ],
