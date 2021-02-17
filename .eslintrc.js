@@ -14,6 +14,7 @@ module.exports = {
   },
   rules: {
     // 추후 .prettierrc.js 파일에서 설정해줄 예정
+    '@typescript-eslint/no-var-requires': 0,
   },
   settings: {
     react: {
