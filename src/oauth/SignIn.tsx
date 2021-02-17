@@ -1,13 +1,6 @@
-import axios from 'axios';
-import qs from 'qs';
 import React, { useEffect } from 'react';
-import { toQuery } from '../utils/url';
-
-export interface ISignInProps {
-  clientId: string;
-  scope: string;
-  redirectUri: string;
-}
+import { toQuery } from 'utils/url';
+import { ISignInProps } from 'oauth/AuthData';
 
 const SignIn: React.FC<Partial<ISignInProps>> = ({
   clientId,
