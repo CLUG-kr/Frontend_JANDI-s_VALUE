@@ -16,7 +16,7 @@ const Main: React.FC = () => {
   const history = useHistory();
   const [accessToken, setAccessToken] = useState({});
   const getGitHubAccessToken = async (body: { [key: string]: any }) => {
-    const res = await axios.post('http://3.34.194.121:8000/oauth/', body);
+    const res = await axios.post('https://3.34.194.121:8000/oauth/', body);
     return res.data;
   };
   const body = useMemo(
