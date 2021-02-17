@@ -1,0 +1,14 @@
+.jandi-btn {
+  &--gray {
+    background: #EEEEEE;
+    border: #EEEEEE;
+
+    &:hover {
+      background: #e5e5e5;
+    }
+
+    * {
+      color: #4F4F4F;
+    }
+  }
+}
