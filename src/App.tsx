@@ -1,5 +1,6 @@
 import React from 'react';
 import './App.css';
+import 'antd/dist/antd.less';
 import { BrowserRouter as Router } from 'react-router-dom';
 import Main from './components/Main';
 
