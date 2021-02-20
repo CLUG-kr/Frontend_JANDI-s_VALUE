@@ -6,37 +6,16 @@ import { GithubOutlined } from '@ant-design/icons';
 import tw from 'twin.macro';
 import Footer from 'components/layout/footer/Footer';
 import { useHistory } from 'react-router-dom';
+import { BackgroundGradient } from 'styles/Common';
 
 const IntroJumbotron = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: 500px;
-  //background: linear-gradient(98.75deg, #44d680 19.63%, #2ccba5 71.49%);
+  height: 350px;
 
-  background: linear-gradient(-45deg, #44d680, #1dc4ca, #53d078, #3deac1);
-  background-size: 400% 400%;
-  animation: gradient 15s ease infinite;
-
-  @keyframes gradient {
-    0% {
-      background-position: 0% 50%;
-    }
-    50% {
-      background-position: 100% 50%;
-    }
-    100% {
-      background-position: 0% 50%;
-    }
-  }
-`;
-
-const IntroJumbotronText = styled.h1`
-  font-family: 'Montserrat', sans-serif;
-  font-size: 2rem;
-  font-weight: 700;
-  color: white;
+  ${BackgroundGradient}
 `;
 
 const IntroWrapper = styled.div`
