@@ -94,7 +94,7 @@ const RepoSelection: React.FC = () => {
         <RepoBtnGroup>
           {repositoryList?.length ? (
             repositoryList.map(i => (
-              <Link to={`/app/dashboard?repository=${i}`}>
+              <Link to={`/dashboard?repository=${i}`}>
                 <RepoBtn>
                   {i}
                   <RightOutlined />

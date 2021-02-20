@@ -48,6 +48,21 @@ const Main: React.FC = () => {
           <GitHubAuthRedirect />
         </Route>
         <ConditionalRoute
+          condition={!!accessToken && accessToken !== ''}
+          path="/repo_selection"
+          redirectPath="/intro"
+        >
+          <RepoSelection />
+        </ConditionalRoute>
+
+        <ConditionalRoute
+          condition={!!accessToken && accessToken !== ''}
+          path="/dashboard"
+          redirectPath="/intro"
+        >
+          <Dashboard />
+        </ConditionalRoute>
+        <ConditionalRoute
           path="/app"
           redirectPath="/intro"
           condition={!!accessToken && accessToken !== ''}
@@ -60,12 +75,7 @@ const Main: React.FC = () => {
             message.info('로그인이 정상 처리되었습니다.');
           }}
         >
-          <Route path="/repo_selection">
-            <RepoSelection />
-          </Route>
-          <Route path="/dashboard">
-            <Dashboard />
-          </Route>
+          <Redirect to="/repo_selection" />
         </ConditionalRoute>
       </Switch>
     </>
