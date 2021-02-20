@@ -66,16 +66,11 @@ const RepoSelection: React.FC = () => {
   useEffect(() => {
     // if (accessToken !== '' && !!accessToken) {
     axios
-      .get(
-        SERVER_HOST +
-          '/dashboard/repolist/?access_token=' +
-          '070a691cf06817f5a233482276ea23179031afbb',
-        {
-          headers: {
-            Accept: 'application/json',
-          },
+      .get(SERVER_HOST + '/dashboard/repolist/?access_token=' + accessToken, {
+        headers: {
+          Accept: 'application/json',
         },
-      )
+      })
       .then(res => {
         console.log(res);
         setRepositoryList(res.data.repositories);
