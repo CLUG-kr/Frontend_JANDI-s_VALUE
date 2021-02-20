@@ -1,3 +1,5 @@
+import { useLocation } from 'react-router-dom';
+
 export function toParams(query: string): { [key: string]: any } {
   const q = query.substring(1);
   return q.split('&').reduce((values, param) => {
@@ -24,4 +26,8 @@ export function toQuery(params: { [key: string]: any }, delimiter = '&') {
 
     return query;
   }, '');
+}
+
+export function useQuery() {
+  return new URLSearchParams(useLocation().search);
 }
