@@ -8,6 +8,7 @@ import ConditionalRoute from 'components/layout/ConditionalRoute';
 import { useLocalStorage } from '@rehooks/local-storage';
 import { message } from 'antd';
 import RepoSelection from 'components/intro/RepoSelection';
+import Dashboard from 'components/dashboard/Dashboard';
 
 const Main: React.FC = () => {
   const [accessToken] = useLocalStorage<string>('access_token', '');
@@ -46,9 +47,6 @@ const Main: React.FC = () => {
         <Route path="/oauth_redirect">
           <GitHubAuthRedirect />
         </Route>
-        <Route path="/repo_selection">
-          <RepoSelection />
-        </Route>
         <ConditionalRoute
           path="/app"
           redirectPath="/intro"
@@ -62,7 +60,12 @@ const Main: React.FC = () => {
             message.info('로그인이 정상 처리되었습니다.');
           }}
         >
-          <RepoSelection />
+          <Route path="/repo_selection">
+            <RepoSelection />
+          </Route>
+          <Route path="/dashboard">
+            <Dashboard />
+          </Route>
         </ConditionalRoute>
       </Switch>
     </>
