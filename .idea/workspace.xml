@@ -5,8 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="427c3196-0df9-49b1-ba76-998d4188cd94" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/oauth/AuthData.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/oauth/AuthData.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/oauth/GitHubAuthRedirect.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/oauth/GitHubAuthRedirect.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -101,7 +99,7 @@
       <workItem from="1613584016558" duration="461000" />
       <workItem from="1613670796185" duration="523000" />
       <workItem from="1613813153726" duration="283000" />
-      <workItem from="1613827796229" duration="2120000" />
+      <workItem from="1613827796229" duration="2249000" />
     </task>
     <servers />
   </component>
