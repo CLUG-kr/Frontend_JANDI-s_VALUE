@@ -50,6 +50,10 @@ const Main: React.FC = () => {
           redirectPath="/intro"
           condition={!!accessToken && accessToken !== ''}
           onTrue={() => {
+            console.log(
+              '너네가 그렇게 원하는, 엑-세-스-토-큰이다!!',
+              accessToken,
+            );
             message.info('로그인이 정상 처리되었습니다.');
           }}
         >
