@@ -8,6 +8,7 @@ import { useLocalStorage } from '@rehooks/local-storage';
 import { SERVER_HOST } from 'utils/network';
 import { Skeleton, Spin } from 'antd';
 import { css } from '@emotion/react';
+import { Link } from 'react-router-dom';
 
 const RepoSelectionWrapper = styled.div`
   width: 100%;
@@ -39,6 +40,7 @@ const RepoBtnGroup = styled.div`
 `;
 
 const RepoBtn = styled.button`
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -92,10 +94,12 @@ const RepoSelection: React.FC = () => {
         <RepoBtnGroup>
           {repositoryList?.length ? (
             repositoryList.map(i => (
-              <RepoBtn>
-                {i}
-                <RightOutlined />
-              </RepoBtn>
+              <Link to={`/app/dashboard?repository=${i}`}>
+                <RepoBtn>
+                  {i}
+                  <RightOutlined />
+                </RepoBtn>
+              </Link>
             ))
           ) : (
             <Spin css={SpinStyle} />
