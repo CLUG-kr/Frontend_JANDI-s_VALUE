@@ -1,8 +1,13 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import styled from '@emotion/styled';
 import tw from 'twin.macro';
 import { GithubFilled, RightOutlined } from '@ant-design/icons';
 import { BackgroundGradient } from 'styles/Common';
+import axios from 'axios';
+import { useLocalStorage } from '@rehooks/local-storage';
+import { SERVER_HOST } from 'utils/network';
+import { Skeleton, Spin } from 'antd';
+import { css } from '@emotion/react';
 
 const RepoSelectionWrapper = styled.div`
   width: 100%;
@@ -49,56 +54,56 @@ const RepoBtn = styled.button`
   }
 `;
 
+const SpinStyle = css`
+  .ant-spin-dot-item {
+    background: white !important;
+  }
+`;
+
 const RepoSelection: React.FC = () => {
-  const data = [
-    'asd',
-    'asdsad',
-    'asdsad',
-    'asdsad',
-    'asdsad',
-    'asdsad',
-    'asdsad',
-    'asdsad',
-    'asdsad',
-    'asdsad',
-    'asdsad',
-    'asdsad',
-    'asdsad',
-    'asdsad',
-    'asdsad',
-    'asdsad',
-    'asdsad',
-    'asdsad',
-    'asdsad',
-    'asdsad',
-    'asdsad',
-    'asdsad',
-    'asdsad',
-    'asdsad',
-    'asdsad',
-    'asdsad',
-    'asdsad',
-    'asdsad',
-    'asdsad',
-    'asdsad',
-    'asdsad',
-    'asdsad',
-    'asdsad',
-  ];
+  const [accessToken] = useLocalStorage<string>('access_token', '');
+
+  useEffect(() => {
+    // if (accessToken !== '' && !!accessToken) {
+    axios
+      .get(
+        SERVER_HOST +
+          '/dashboard/repolist/?access_token=' +
+          '070a691cf06817f5a233482276ea23179031afbb',
+        {
+          headers: {
+            Accept: 'application/json',
+          },
+        },
+      )
+      .then(res => {
+        console.log(res);
+        setRepositoryList(res.data.repositories);
+      })
+      .catch(err => console.log(err));
+    // }
+  }, [accessToken]);
+
+  const [repositoryList, setRepositoryList] = useState([]);
+
   return (
     <RepoSelectionWrapper>
       <InnerWrapper>
         <GithubFilled css={tw`text-7xl mb-8 text-white`} />
-        <h1 css={tw`text-5xl font-bold text-white tracking-tight\t`}>
+        <h1 css={tw`text-5xl font-bold text-white tracking-tight`}>
           레포지터리를 선택해주세요.
         </h1>
         <RepoBtnGroup>
-          {data.map(i => (
-            <RepoBtn>
-              {i}
-              <RightOutlined />
-            </RepoBtn>
-          ))}
+          {repositoryList?.length ? (
+            repositoryList.map(i => (
+              <RepoBtn>
+                {i}
+                <RightOutlined />
+              </RepoBtn>
+            ))
+          ) : (
+            <Spin css={SpinStyle} />
+          )}
         </RepoBtnGroup>
       </InnerWrapper>
     </RepoSelectionWrapper>

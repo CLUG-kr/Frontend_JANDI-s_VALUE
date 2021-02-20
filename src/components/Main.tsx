@@ -7,6 +7,7 @@ import { SignInData } from 'oauth/AuthData';
 import ConditionalRoute from 'components/layout/ConditionalRoute';
 import { useLocalStorage } from '@rehooks/local-storage';
 import { message } from 'antd';
+import RepoSelection from 'components/intro/RepoSelection';
 
 const Main: React.FC = () => {
   const [accessToken] = useLocalStorage<string>('access_token', '');
@@ -45,10 +46,14 @@ const Main: React.FC = () => {
         <Route path="/oauth_redirect">
           <GitHubAuthRedirect />
         </Route>
+        <Route path="/repo_selection">
+          <RepoSelection />
+        </Route>
         <ConditionalRoute
           path="/app"
           redirectPath="/intro"
           condition={!!accessToken && accessToken !== ''}
+          // condition={true}
           onTrue={() => {
             console.log(
               '너네가 그렇게 원하는, 엑-세-스-토-큰이다!!',
@@ -57,7 +62,7 @@ const Main: React.FC = () => {
             message.info('로그인이 정상 처리되었습니다.');
           }}
         >
-          <div>TEST</div>
+          <RepoSelection />
         </ConditionalRoute>
       </Switch>
     </>
