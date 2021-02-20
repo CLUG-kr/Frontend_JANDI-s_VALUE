@@ -11,7 +11,7 @@ const GitHubAuthRedirect: React.FC = () => {
   const [accessToken] = useLocalStorage<string>('access_token', '');
   const history = useHistory();
   const getGitHubAccessToken = async (body: { [key: string]: any }) => {
-    const res = await axios.post('http://localhost:8000/oauth/', body);
+    const res = await axios.post('https://www.jandevelop.com/oauth/', body);
     return res.data;
   };
   const body = useMemo(
