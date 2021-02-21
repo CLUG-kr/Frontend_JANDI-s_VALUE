@@ -26,7 +26,7 @@ const InnerWrapper = styled.div`
   height: 100%;
   overflow: auto;
 
-  ${tw`py-32 px-6`}
+  ${tw`py-32 px-6 text-center`}
 `;
 
 const RepoBtnGroup = styled.div`
