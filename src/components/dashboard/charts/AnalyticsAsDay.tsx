@@ -11,6 +11,7 @@ const AnalyticsAsDay: React.FC<IAnalyticsAsDayProps> = ({ data }) => {
   const config = useMemo<ColumnConfig>(
     () => ({
       data: data,
+      width: 370,
       xField: 'day',
       yField: 'value',
       label: {

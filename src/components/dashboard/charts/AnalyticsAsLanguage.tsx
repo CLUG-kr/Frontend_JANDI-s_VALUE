@@ -12,6 +12,7 @@ const AnalyticsAsLanguage: React.FC<IAnalyticsAsLanguageProps> = ({ data }) => {
     () => ({
       appendPadding: 10,
       data: data,
+      width: 370,
       angleField: 'value',
       colorField: 'language',
       radius: 0.8,

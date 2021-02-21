@@ -10,6 +10,7 @@ const AnalyticsAsTime: React.FC<IAnalyticsAsTimeProps> = ({ data }) => {
   const config = useMemo(
     () => ({
       data: data,
+      width: 370,
       xField: 'time',
       yField: 'value',
       label: {},
