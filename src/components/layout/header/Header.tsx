@@ -14,6 +14,8 @@ const HeaderWrapper = styled.div`
   justify-content: space-between;
   align-items: center;
   padding: 30px 16px;
+
+  ${tw`md:flex-row flex-col`}
 `;
 
 const HeaderLogo = styled.img`
@@ -29,7 +31,7 @@ const Profile = styled.div`
     margin-left: 0.7rem;
   }
 
-  ${tw`px-3 py-2 rounded-lg hover:bg-gray-100 cursor-pointer`}
+  ${tw`-ml-3 md:m-0 px-3 py-2 rounded-lg hover:bg-gray-100 cursor-pointer`}
 `;
 
 const ProfileDescription = styled.div`
@@ -78,7 +80,10 @@ const Header: React.FC<IHeaderProps> = ({ profile, repository }) => {
                 <span css={tw`text-xs mb-0! text-gray-600!`}>
                   {profile?.username || '불러오는 중'}
                 </span>
-                <Title level={5} css={tw`mb-0! text-gray-800!`}>
+                <Title
+                  level={5}
+                  css={tw`mb-0! text-gray-800! overflow-hidden! overflow-ellipsis! whitespace-nowrap! md:w-full w-40`}
+                >
                   {repository || '불러오는 중'}
                 </Title>
               </ProfileDescription>
