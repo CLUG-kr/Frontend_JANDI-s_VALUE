@@ -13,9 +13,10 @@ interface IDashboardProps {
 }
 
 const DashboardWrapper = styled.div`
-  max-width: 1300px;
+  max-width: 900px;
   width: 100%;
   margin: 0 auto;
+  background: white;
 `;
 
 const Contents = styled.div`
