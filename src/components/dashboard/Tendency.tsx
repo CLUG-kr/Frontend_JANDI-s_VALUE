@@ -17,7 +17,7 @@ const TendencyImage = styled.div<{ image: string }>`
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: 350px;
+  height: 300px;
   background: url(${props => props.image}) center;
   background-size: cover;
 
@@ -62,8 +62,9 @@ const Tendency: React.FC<ITendencyProps> = ({ tendency, username }) => {
     <div css={tw`space-y-4`}>
       <div css={tw`flex items-center space-x-4`}>
         <img src={SearchIcon} alt="search" />
-        <span css={tw`text-lg text-gray-800`}>
-          제가 {username}님의 개발 성향을 분석해봤어요!
+        <span css={tw`text-base text-gray-800`}>
+          제가 <span css={tw`text-primary font-bold`}>{username}</span>님의 개발
+          성향을 분석해봤어요!
         </span>
       </div>
       <TendencyImage image={tendencyImage}>
