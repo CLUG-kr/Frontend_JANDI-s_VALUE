@@ -19,7 +19,7 @@ const Footer: React.FC = () => {
   return (
     <FooterWrapper>
       <LogoImage src={JandevelopLogo} alt="Jandevelop Logo" />
-      <span css={tw`text-gray-500 mt-1 text-xs`}>
+      <span css={tw`text-gray-500 mt-1 text-xs text-center`}>
         Copyright(c) 2021. JANDevelopers. All rights reserved.
       </span>
     </FooterWrapper>
