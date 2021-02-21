@@ -5,6 +5,8 @@ import { IDashboardData } from '../../models/DashboardModel';
 import History from 'components/dashboard/History';
 import styled from '@emotion/styled';
 import Tendency from 'components/dashboard/Tendency';
+import Footer from 'components/layout/footer/Footer';
+import Analytics from 'components/dashboard/Analytics';
 
 interface IDashboardProps {
   data: IDashboardData;
@@ -24,6 +26,7 @@ const Dashboard: React.FC<IDashboardProps> = ({ data }) => {
         <Tendency tendency={data.tendency} username={data.profile.username} />
         <Divider />
       </Contents>
+      <Footer />
     </>
   );
 };
