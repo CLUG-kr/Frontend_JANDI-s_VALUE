@@ -49,7 +49,7 @@ const Header: React.FC<IHeaderProps> = ({ profile }) => {
     <>
       <HeaderWrapper>
         <HeaderLogo src={Logo} alt="logo" />
-        <div css={tw`flex justify-center items-center`}>
+        <div css={tw`flex justify-center items-center space-x-2`}>
           <a href={`https://github.com/${profile?.username}`} target="_blank">
             <Profile>
               <Avatar
@@ -65,7 +65,7 @@ const Header: React.FC<IHeaderProps> = ({ profile }) => {
               </ProfileDescription>
             </Profile>
           </a>
-          <Tooltip placement="bottom" title="레포지터리 변경" css={tw`mr-2`}>
+          <Tooltip placement="bottom" title="레포지터리 변경">
             <Button
               shape="circle"
               icon={<SwapOutlined />}
