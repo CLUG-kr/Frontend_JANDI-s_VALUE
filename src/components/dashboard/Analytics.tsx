@@ -20,28 +20,28 @@ const AnalyticsItem = styled.div`
 
 const Analytics: React.FC<IAnalyticsProps> = ({ analytics }) => {
   return (
-    <div css={tw`grid grid-cols-2 gap-4`}>
+    <div css={tw`grid grid-cols-1 lg:grid-cols-2 gap-6`}>
       <AnalyticsItem>
         <AnalyticsAsContribution data={analytics.contribution} />
-        <h3 css={tw`text-gray-800 text-lg tracking-tight`}>
+        <h3 css={tw`text-gray-800 text-lg tracking-tight mt-4`}>
           컨트리뷰션 분석 그래프
         </h3>
       </AnalyticsItem>
       <AnalyticsItem>
         <AnalyticsAsDay data={analytics.day} />
-        <h3 css={tw`text-gray-800 text-lg tracking-tight`}>
+        <h3 css={tw`text-gray-800 text-lg tracking-tight mt-4`}>
           요일별 커밋 경향 그래프
         </h3>
       </AnalyticsItem>
-      <AnalyticsAsLanguage data={analytics.language} />
       <AnalyticsItem>
-        <h3 css={tw`text-gray-800 text-lg tracking-tight`}>
+        <AnalyticsAsLanguage data={analytics.language} />
+        <h3 css={tw`text-gray-800 text-lg tracking-tight mt-4`}>
           언어 사용 경향 그래프
         </h3>
       </AnalyticsItem>
       <AnalyticsItem>
         <AnalyticsAsTime data={analytics.time} />
-        <h3 css={tw`text-gray-800 text-lg tracking-tight`}>
+        <h3 css={tw`text-gray-800 text-lg tracking-tight mt-4`}>
           시간별 커밋 경향 그래프
         </h3>
       </AnalyticsItem>
