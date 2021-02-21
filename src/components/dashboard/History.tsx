@@ -27,7 +27,7 @@ const History: React.FC<IHistoryProps> = ({
 }) => {
   return (
     <HistoryWrapper>
-      <h1 css={tw`text-gray-800 mb-6 text-5xl font-bold`}>
+      <h1 css={tw`text-gray-800 mb-6 text-4xl md:text-5xl font-bold`}>
         오늘 <PrimaryText>{today}</PrimaryText>개 커밋 달성
       </h1>
       <div css={tw`flex flex-col space-y-1 text-gray-800`}>
