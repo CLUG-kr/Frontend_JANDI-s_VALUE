@@ -11,9 +11,24 @@ export interface ITendency {
 
 export interface IAnalytics {
   contribution: any;
-  day: any;
-  language: any;
-  time: any;
+  day: IAnalyticsAsDay[];
+  language: IAnalyticsAsLanguage[];
+  time: IAnalyticsTime[];
+}
+
+export interface IAnalyticsAsLanguage {
+  language: string;
+  value: number;
+}
+
+export interface IAnalyticsAsDay {
+  day: string;
+  value: number;
+}
+
+export interface IAnalyticsTime {
+  time: string;
+  value: number;
 }
 
 export interface IDashboardData {
