@@ -17,6 +17,7 @@ module.exports = {
           900: '#222222',
           default: '#B5B5B5',
         },
+        primary: '#44D680',
       },
     },
   },
