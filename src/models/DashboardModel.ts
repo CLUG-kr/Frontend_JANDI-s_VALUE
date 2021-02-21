@@ -10,7 +10,7 @@ export interface ITendency {
 }
 
 export interface IAnalytics {
-  contribution: any;
+  contribution: IAnalyticsAsContribution[];
   day: IAnalyticsAsDay[];
   language: IAnalyticsAsLanguage[];
   time: IAnalyticsTime[];
@@ -28,6 +28,11 @@ export interface IAnalyticsAsDay {
 
 export interface IAnalyticsTime {
   time: string;
+  value: number;
+}
+
+export interface IAnalyticsAsContribution {
+  username: string;
   value: number;
 }
 
