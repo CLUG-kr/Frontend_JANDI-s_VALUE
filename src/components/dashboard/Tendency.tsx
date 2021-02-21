@@ -17,18 +17,17 @@ const TendencyImage = styled.div<{ image: string }>`
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: 300px;
   background: url(${props => props.image}) center;
   background-size: cover;
 
-  ${tw`rounded-xl`}
+  ${tw`rounded-xl h-48 md:h-72`}
 `;
 
 const TendencyImageText = styled.h1<{ type: TendencyType }>`
   word-break: keep-all;
   text-shadow: 0px 0px 14px rgba(0, 0, 0, 0.3);
   
-  ${tw`text-4xl text-white font-bold leading-snug p-2 rounded-lg`}
+  ${tw`text-2xl md:text-4xl text-white font-bold leading-snug p-2 rounded-lg`}
 }`;
 
 const Tendency: React.FC<ITendencyProps> = ({ tendency, username }) => {
@@ -62,7 +61,7 @@ const Tendency: React.FC<ITendencyProps> = ({ tendency, username }) => {
     <div css={tw`space-y-4`}>
       <div css={tw`flex items-center space-x-4`}>
         <img src={SearchIcon} alt="search" />
-        <span css={tw`text-base text-gray-800`}>
+        <span css={tw`text-base text-gray-800 text-left`}>
           제가 <span css={tw`text-primary font-bold`}>{username}</span>님의 개발
           성향을 분석해봤어요!
         </span>
