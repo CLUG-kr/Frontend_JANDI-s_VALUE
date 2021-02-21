@@ -2,9 +2,9 @@ import React from 'react';
 import Header from 'components/layout/header/Header';
 import { Divider } from 'antd';
 import { IDashboardData } from '../../models/DashboardModel';
-import { Spin } from 'antd';
+import History from 'components/dashboard/History';
 import styled from '@emotion/styled';
-import { SERVER_HOST } from 'utils/network';
+import Tendency from 'components/dashboard/Tendency';
 
 interface IDashboardProps {
   data: IDashboardData;
@@ -18,7 +18,12 @@ const Dashboard: React.FC<IDashboardProps> = ({ data }) => {
   return (
     <>
       <Header profile={data.profile} />
-      <Header profile={profile} />
+      <Contents>
+        <History today={1} yesterday={2} weekAgo={3} total={4} />
+        <Divider />
+        <Tendency tendency={data.tendency} />
+        <Divider />
+      </Contents>
     </>
   );
 };
