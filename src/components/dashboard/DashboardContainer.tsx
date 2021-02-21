@@ -6,6 +6,7 @@ import axios from 'axios';
 import { SERVER_HOST } from 'utils/network';
 import Dashboard from 'components/dashboard/Dashboard';
 import { IDashboardData } from '../../models/DashboardModel';
+import { message } from 'antd';
 
 const DashboardContainer: React.FC = () => {
   const history = useHistory();
@@ -34,9 +35,43 @@ const DashboardContainer: React.FC = () => {
       )
     ).data;
 
+    const analytics_contribution = (
+      await axios.get(
+        SERVER_HOST +
+          `/dashboard/contribution?access_token=${accessToken}&repository_name=${repository}`,
+      )
+    ).data;
+
+    const analytics_day = (
+      await axios.get(
+        SERVER_HOST +
+          `/dashboard/day?access_token=${accessToken}&repository_name=${repository}`,
+      )
+    ).data;
+
+    const analytics_language = (
+      await axios.get(
+        SERVER_HOST +
+          `/dashboard/language?access_token=${accessToken}&repository_name=${repository}`,
+      )
+    ).data;
+
+    const analytics_time = (
+      await axios.get(
+        SERVER_HOST +
+          `/dashboard/time?access_token=${accessToken}&repository_name=${repository}`,
+      )
+    ).data;
+
     return {
       profile,
       tendency,
+      analytics: {
+        contribution: analytics_contribution,
+        day: analytics_day,
+        language: analytics_language,
+        time: analytics_time,
+      },
     };
   };
 
@@ -58,6 +93,7 @@ const DashboardContainer: React.FC = () => {
           setData(await getData(repository));
           setIsFetching(false);
         } catch (err) {
+          message.error('통신 오류가 발생하였습니다.');
           console.error('통신 오류 발생', err);
         }
       })();
