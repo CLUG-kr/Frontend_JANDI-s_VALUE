@@ -1,10 +1,12 @@
 import styled from '@emotion/styled';
-import React from 'react';
+import React, { useCallback } from 'react';
 import Logo from 'assets/images/logo.svg';
 import tw from 'twin.macro';
 import { IProfile } from '../../../models/DashboardModel';
-import { Avatar, Button } from 'antd';
+import { Avatar, Button, Tooltip } from 'antd';
 import Title from 'antd/es/typography/Title';
+import { LogoutOutlined, SwapOutlined } from '@ant-design/icons';
+import { useHistory } from 'react-router-dom';
 
 const HeaderWrapper = styled.div`
   display: flex;
@@ -26,7 +28,7 @@ const Profile = styled.div`
     margin-left: 0.7rem;
   }
 
-  ${tw`-mr-3 px-3 py-2 rounded-lg hover:bg-gray-100 cursor-pointer`}
+  ${tw`px-3 py-2 rounded-lg hover:bg-gray-100 cursor-pointer`}
 `;
 
 const ProfileDescription = styled.div`
@@ -38,23 +40,42 @@ interface IHeaderProps {
 }
 
 const Header: React.FC<IHeaderProps> = ({ profile }) => {
+  const history = useHistory();
+  const changeRepository = useCallback(() => {
+    history.replace('/repo_selection');
+  }, [history]);
+
   return (
     <>
       <HeaderWrapper>
         <HeaderLogo src={Logo} alt="logo" />
-        <a href={`https://github.com/${profile?.username}`} target="_blank">
-          <Profile>
-            <Avatar
-              size={24}
-              icon={<img src={profile?.profile_img_url} alt="profile image" />}
+        <div css={tw`flex justify-center items-center`}>
+          <a href={`https://github.com/${profile?.username}`} target="_blank">
+            <Profile>
+              <Avatar
+                size={24}
+                icon={
+                  <img src={profile?.profile_img_url} alt="profile image" />
+                }
+              />
+              <ProfileDescription>
+                <Title level={5} css={tw`mb-0! text-gray-800!`}>
+                  {profile?.username || '불러오는 중'}
+                </Title>
+              </ProfileDescription>
+            </Profile>
+          </a>
+          <Tooltip placement="bottom" title="레포지터리 변경" css={tw`mr-2`}>
+            <Button
+              shape="circle"
+              icon={<SwapOutlined />}
+              onClick={changeRepository}
             />
-            <ProfileDescription>
-              <Title level={5} css={tw`mb-0! text-gray-800!`}>
-                {profile?.username || '불러오는 중'}
-              </Title>
-            </ProfileDescription>
-          </Profile>
-        </a>
+          </Tooltip>
+          <Tooltip placement="bottom" title="로그아웃 (현재 미지원)">
+            <Button shape="circle" icon={<LogoutOutlined />} disabled />
+          </Tooltip>
+        </div>
       </HeaderWrapper>
     </>
   );
