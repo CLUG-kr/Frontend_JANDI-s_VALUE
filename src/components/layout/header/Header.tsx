@@ -50,6 +50,7 @@ const Header: React.FC<IHeaderProps> = ({ profile }) => {
   const changeRepository = useCallback(() => {
     history.replace('/repo_selection');
   }, [history]);
+
   const signOut = useCallback(() => {
     setAccessToken('');
     history.replace('/intro');
@@ -86,7 +87,6 @@ const Header: React.FC<IHeaderProps> = ({ profile }) => {
             <Button
               shape="circle"
               icon={<LogoutOutlined />}
-              disabled
               onClick={signOut}
             />
           </Tooltip>
