@@ -21,7 +21,7 @@ const Dashboard: React.FC<IDashboardProps> = ({ data }) => {
       <Contents>
         <History today={1} yesterday={2} weekAgo={3} total={4} />
         <Divider />
-        <Tendency tendency={data.tendency} />
+        <Tendency tendency={data.tendency} username={data.profile.username} />
         <Divider />
       </Contents>
     </>

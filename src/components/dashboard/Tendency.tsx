@@ -9,6 +9,7 @@ import styled from '@emotion/styled';
 
 interface ITendencyProps {
   tendency: ITendency;
+  username: string;
 }
 
 const TendencyImage = styled.div<{ image: string }>`
@@ -30,7 +31,7 @@ const TendencyImageText = styled.h1<{ type: TendencyType }>`
   ${tw`text-4xl text-white font-bold leading-snug p-2 rounded-lg`}
 }`;
 
-const Tendency: React.FC<ITendencyProps> = ({ tendency }) => {
+const Tendency: React.FC<ITendencyProps> = ({ tendency, username }) => {
   const developerType = useMemo(() => {
     switch (tendency.type) {
       case '새벽':
@@ -61,8 +62,8 @@ const Tendency: React.FC<ITendencyProps> = ({ tendency }) => {
     <div css={tw`space-y-4`}>
       <div css={tw`flex items-center space-x-4`}>
         <img src={SearchIcon} alt="search" />
-        <span css={tw`text-sm text-gray-800`}>
-          제가 Sarah님의 개발 성향을 분석해봤어요!
+        <span css={tw`text-lg text-gray-800`}>
+          제가 {username}님의 개발 성향을 분석해봤어요!
         </span>
       </div>
       <TendencyImage image={tendencyImage}>
