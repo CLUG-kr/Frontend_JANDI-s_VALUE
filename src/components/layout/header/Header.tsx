@@ -7,6 +7,7 @@ import { Avatar, Button, Tooltip } from 'antd';
 import Title from 'antd/es/typography/Title';
 import { LogoutOutlined, SwapOutlined } from '@ant-design/icons';
 import { useHistory } from 'react-router-dom';
+import { useLocalStorage } from '@rehooks/local-storage';
 
 const HeaderWrapper = styled.div`
   display: flex;
@@ -41,8 +42,17 @@ interface IHeaderProps {
 
 const Header: React.FC<IHeaderProps> = ({ profile }) => {
   const history = useHistory();
+  const [accessToken, setAccessToken] = useLocalStorage<string>(
+    'access_token',
+    '',
+  );
+
   const changeRepository = useCallback(() => {
     history.replace('/repo_selection');
+  }, [history]);
+  const signOut = useCallback(() => {
+    setAccessToken('');
+    history.replace('/intro');
   }, [history]);
 
   return (
@@ -73,7 +83,12 @@ const Header: React.FC<IHeaderProps> = ({ profile }) => {
             />
           </Tooltip>
           <Tooltip placement="bottom" title="로그아웃 (현재 미지원)">
-            <Button shape="circle" icon={<LogoutOutlined />} disabled />
+            <Button
+              shape="circle"
+              icon={<LogoutOutlined />}
+              disabled
+              onClick={signOut}
+            />
           </Tooltip>
         </div>
       </HeaderWrapper>
