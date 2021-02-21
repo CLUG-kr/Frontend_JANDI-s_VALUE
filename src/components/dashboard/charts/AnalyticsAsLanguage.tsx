@@ -10,7 +10,7 @@ interface IAnalyticsAsLanguageProps {
 const AnalyticsAsLanguage: React.FC<IAnalyticsAsLanguageProps> = ({ data }) => {
   const config = useMemo<PieConfig>(
     () => ({
-      appendPadding: 20,
+      appendPadding: 10,
       data: data,
       angleField: 'value',
       colorField: 'language',
