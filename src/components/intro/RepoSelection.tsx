@@ -88,7 +88,10 @@ const RepoSelection: React.FC = () => {
     <RepoSelectionWrapper>
       <InnerWrapper>
         <GithubFilled css={tw`text-7xl mb-8 text-white`} />
-        <h1 css={tw`text-3xl font-bold text-white tracking-tight md:text-5xl`}>
+        <h1
+          css={tw`text-3xl font-bold text-white tracking-tight md:text-5xl`}
+          style={{ wordBreak: 'keep-all' }}
+        >
           레포지터리를 선택해주세요.
         </h1>
         <RepoBtnGroup>
