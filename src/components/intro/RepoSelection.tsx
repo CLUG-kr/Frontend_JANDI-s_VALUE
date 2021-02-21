@@ -6,7 +6,7 @@ import { BackgroundGradient } from 'styles/Common';
 import axios from 'axios';
 import { useLocalStorage } from '@rehooks/local-storage';
 import { SERVER_HOST } from 'utils/network';
-import { Skeleton, Spin } from 'antd';
+import { Spin } from 'antd';
 import { css } from '@emotion/react';
 import { Link } from 'react-router-dom';
 
@@ -67,19 +67,19 @@ const RepoSelection: React.FC = () => {
   const [accessToken] = useLocalStorage<string>('access_token', '');
 
   useEffect(() => {
-    // if (accessToken !== '' && !!accessToken) {
-    axios
-      .get(SERVER_HOST + '/dashboard/repolist/?access_token=' + accessToken, {
-        headers: {
-          Accept: 'application/json',
-        },
-      })
-      .then(res => {
-        console.log(res);
-        setRepositoryList(res.data.repositories);
-      })
-      .catch(err => console.log(err));
-    // }
+    if (accessToken !== '' && !!accessToken) {
+      axios
+        .get(SERVER_HOST + `/dashboard/repolist/?access_token=${accessToken}`, {
+          headers: {
+            Accept: 'application/json',
+          },
+        })
+        .then(res => {
+          console.log(res);
+          setRepositoryList(res.data.repositories);
+        })
+        .catch(err => console.log(err));
+    }
   }, [accessToken]);
 
   const [repositoryList, setRepositoryList] = useState([]);
