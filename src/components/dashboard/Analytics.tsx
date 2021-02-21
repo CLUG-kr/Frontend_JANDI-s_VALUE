@@ -20,7 +20,7 @@ const AnalyticsItem = styled.div`
 
 const Analytics: React.FC<IAnalyticsProps> = ({ analytics }) => {
   return (
-    <div css={tw`grid grid-cols-2`}>
+    <div css={tw`grid grid-cols-2 gap-4`}>
       <AnalyticsItem>
         <AnalyticsAsContribution data={analytics.contribution} />
         <h3 css={tw`text-gray-800 text-lg tracking-tight`}>
