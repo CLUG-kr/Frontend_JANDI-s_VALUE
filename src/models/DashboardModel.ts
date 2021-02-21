@@ -9,7 +9,15 @@ export interface ITendency {
   type: TendencyType;
 }
 
+export interface IAnalytics {
+  contribution: any;
+  day: any;
+  language: any;
+  time: any;
+}
+
 export interface IDashboardData {
   profile: IProfile;
   tendency: ITendency;
+  analytics: IAnalytics;
 }
