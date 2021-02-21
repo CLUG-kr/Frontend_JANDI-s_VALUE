@@ -3,10 +3,11 @@ import { useHistory } from 'react-router-dom';
 import { useQuery } from 'utils/url';
 import { useLocalStorage } from '@rehooks/local-storage';
 import axios from 'axios';
-import { SERVER_HOST } from 'utils/network';
+import { DEBUG_ACCESS_TOKEN, SERVER_HOST } from 'utils/network';
 import Dashboard from 'components/dashboard/Dashboard';
 import { IDashboardData } from '../../models/DashboardModel';
-import { message } from 'antd';
+import { message, Spin } from 'antd';
+import tw from 'twin.macro';
 
 const DashboardContainer: React.FC = () => {
   const history = useHistory();
@@ -100,7 +101,13 @@ const DashboardContainer: React.FC = () => {
     }
   }, [isRepoAvailable]);
 
-  return isFetching || !data ? <span>Loading</span> : <Dashboard data={data} />;
+  return isFetching || !data ? (
+    <div css={tw`w-full h-full flex justify-center items-center`}>
+      <Spin />
+    </div>
+  ) : (
+    <Dashboard data={data} />
+  );
 };
 
 export default DashboardContainer;
