@@ -18,7 +18,7 @@ const AnalyticsAsContribution: React.FC<IAnalyticsAsContributionProps> = ({
       colorField: 'username',
       wordStyle: {
         fontFamily: 'Inter',
-        fontSize: [8, 32],
+        fontSize: [15, 60],
         rotation: 0,
       },
       random: function random() {
