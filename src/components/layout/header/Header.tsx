@@ -10,7 +10,7 @@ const HeaderWrapper = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 30px 32px;
+  padding: 30px 16px;
 `;
 
 const HeaderLogo = styled.img`
@@ -26,7 +26,7 @@ const Profile = styled.div`
     margin-left: 0.7rem;
   }
 
-  ${tw`px-3 py-2 rounded-lg hover:bg-gray-100 cursor-pointer`}
+  ${tw`-mr-3 px-3 py-2 rounded-lg hover:bg-gray-100 cursor-pointer`}
 `;
 
 const ProfileDescription = styled.div`

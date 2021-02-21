@@ -19,7 +19,7 @@ const DashboardWrapper = styled.div`
 `;
 
 const Contents = styled.div`
-  padding: 30px 32px;
+  padding: 15px 16px;
 `;
 
 const Dashboard: React.FC<IDashboardProps> = ({ data }) => {
