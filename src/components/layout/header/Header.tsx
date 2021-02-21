@@ -9,6 +9,7 @@ import Title from 'antd/es/typography/Title';
 const HeaderWrapper = styled.div`
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding: 30px 32px;
 `;
 
