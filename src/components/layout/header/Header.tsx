@@ -34,13 +34,15 @@ const Profile = styled.div`
 
 const ProfileDescription = styled.div`
   text-align: left;
+  ${tw`-space-y-1`}
 `;
 
 interface IHeaderProps {
   profile: IProfile | null;
+  repository: string;
 }
 
-const Header: React.FC<IHeaderProps> = ({ profile }) => {
+const Header: React.FC<IHeaderProps> = ({ profile, repository }) => {
   const history = useHistory();
   const [accessToken, setAccessToken] = useLocalStorage<string>(
     'access_token',
@@ -61,17 +63,23 @@ const Header: React.FC<IHeaderProps> = ({ profile }) => {
       <HeaderWrapper>
         <HeaderLogo src={Logo} alt="logo" />
         <div css={tw`flex justify-center items-center space-x-2`}>
-          <a href={`https://github.com/${profile?.username}`} target="_blank">
+          <a
+            href={`https://github.com/${profile?.username}/${repository}`}
+            target="_blank"
+          >
             <Profile>
               <Avatar
-                size={24}
+                size={36}
                 icon={
                   <img src={profile?.profile_img_url} alt="profile image" />
                 }
               />
               <ProfileDescription>
-                <Title level={5} css={tw`mb-0! text-gray-800!`}>
+                <span css={tw`text-xs mb-0! text-gray-600!`}>
                   {profile?.username || '불러오는 중'}
+                </span>
+                <Title level={5} css={tw`mb-0! text-gray-800!`}>
+                  {repository || '불러오는 중'}
                 </Title>
               </ProfileDescription>
             </Profile>
@@ -83,7 +91,7 @@ const Header: React.FC<IHeaderProps> = ({ profile }) => {
               onClick={changeRepository}
             />
           </Tooltip>
-          <Tooltip placement="bottom" title="로그아웃 (현재 미지원)">
+          <Tooltip placement="bottom" title="로그아웃">
             <Button
               shape="circle"
               icon={<LogoutOutlined />}

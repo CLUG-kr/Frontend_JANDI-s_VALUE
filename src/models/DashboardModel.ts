@@ -43,6 +43,7 @@ export interface IHistory {
 }
 
 export interface IDashboardData {
+  repository: string;
   profile: IProfile;
   history: IHistory;
   tendency: ITendency;

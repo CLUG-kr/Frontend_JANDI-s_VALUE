@@ -26,7 +26,7 @@ const Contents = styled.div`
 const Dashboard: React.FC<IDashboardProps> = ({ data }) => {
   return (
     <DashboardWrapper>
-      <Header profile={data.profile} />
+      <Header profile={data.profile} repository={data.repository} />
       <Contents>
         <History history={data.history} />
         <Divider />

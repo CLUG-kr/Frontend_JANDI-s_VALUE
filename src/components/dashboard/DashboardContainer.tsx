@@ -71,6 +71,7 @@ const DashboardContainer: React.FC = () => {
     ).data;
 
     return {
+      repository,
       profile,
       history,
       tendency,
