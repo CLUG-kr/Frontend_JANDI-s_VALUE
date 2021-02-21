@@ -36,8 +36,15 @@ export interface IAnalyticsAsContribution {
   value: number;
 }
 
+export interface IHistory {
+  today: number;
+  yesterday: number;
+  weekAgo: number;
+}
+
 export interface IDashboardData {
   profile: IProfile;
+  history: IHistory;
   tendency: ITendency;
   analytics: IAnalytics;
 }

@@ -3,7 +3,7 @@ import { useHistory } from 'react-router-dom';
 import { useQuery } from 'utils/url';
 import { useLocalStorage } from '@rehooks/local-storage';
 import axios from 'axios';
-import { DEBUG_ACCESS_TOKEN, SERVER_HOST } from 'utils/network';
+import { SERVER_HOST } from 'utils/network';
 import Dashboard from 'components/dashboard/Dashboard';
 import { IDashboardData } from '../../models/DashboardModel';
 import { message, Spin } from 'antd';
@@ -24,9 +24,15 @@ const DashboardContainer: React.FC = () => {
   const [isFetching, setIsFetching] = useState(true);
 
   const getData = async (repository: string): Promise<IDashboardData> => {
-    // Profile
     const profile = (
       await axios.get(SERVER_HOST + `/dashboard?access_token=${accessToken}`)
+    ).data;
+
+    const history = (
+      await axios.get(
+        SERVER_HOST +
+          `/dashboard/commit?access_token=${accessToken}&repository_name=${repository}`,
+      )
     ).data;
 
     const tendency = (
@@ -66,6 +72,7 @@ const DashboardContainer: React.FC = () => {
 
     return {
       profile,
+      history,
       tendency,
       analytics: {
         contribution: analytics_contribution,
