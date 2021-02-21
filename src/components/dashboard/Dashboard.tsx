@@ -25,6 +25,7 @@ const Dashboard: React.FC<IDashboardProps> = ({ data }) => {
         <Divider />
         <Tendency tendency={data.tendency} username={data.profile.username} />
         <Divider />
+        <Analytics analytics={data.analytics} />
       </Contents>
       <Footer />
     </>
