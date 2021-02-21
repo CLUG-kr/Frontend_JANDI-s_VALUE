@@ -52,3 +52,6 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
   monospace;
 }
+
+ /*tailwind-ant override*/
+svg { vertical-align: baseline !important; }
