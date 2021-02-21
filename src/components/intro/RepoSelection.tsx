@@ -69,7 +69,7 @@ const RepoSelection: React.FC = () => {
   useEffect(() => {
     if (accessToken !== '' && !!accessToken) {
       axios
-        .get(SERVER_HOST + `/dashboard/repolist/?access_token=${accessToken}`, {
+        .get(SERVER_HOST + `/repolist/?access_token=${accessToken}`, {
           headers: {
             Accept: 'application/json',
           },
