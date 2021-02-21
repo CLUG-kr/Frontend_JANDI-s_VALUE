@@ -9,6 +9,7 @@ import { useLocalStorage } from '@rehooks/local-storage';
 import { message } from 'antd';
 import RepoSelection from 'components/intro/RepoSelection';
 import Dashboard from 'components/dashboard/Dashboard';
+import DashboardContainer from 'components/dashboard/DashboardContainer';
 
 const Main: React.FC = () => {
   const [accessToken] = useLocalStorage<string>('access_token', '');
@@ -47,6 +48,12 @@ const Main: React.FC = () => {
         <Route path="/oauth_redirect">
           <GitHubAuthRedirect />
         </Route>
+        {/*<Route path="/dashboard">*/}
+        {/*  <DashboardContainer />*/}
+        {/*</Route>*/}
+        {/*<Route path="/repo_selection">*/}
+        {/*  <RepoSelection />*/}
+        {/*</Route>*/}
         <ConditionalRoute
           condition={!!accessToken && accessToken !== ''}
           path="/repo_selection"
@@ -60,7 +67,7 @@ const Main: React.FC = () => {
           path="/dashboard"
           redirectPath="/intro"
         >
-          <Dashboard />
+          <DashboardContainer />
         </ConditionalRoute>
         <ConditionalRoute
           path="/app"
