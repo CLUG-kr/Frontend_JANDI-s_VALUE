@@ -1,7 +1,7 @@
 import React, { useMemo } from 'react';
 import { Pie } from '@ant-design/charts';
 import { PieConfig } from '@ant-design/charts/es/pie';
-import { IAnalyticsAsLanguage } from '../../../models/DashboardModel';
+import { IAnalyticsAsLanguage } from 'models/DashboardModel';
 
 interface IAnalyticsAsLanguageProps {
   data: IAnalyticsAsLanguage[];

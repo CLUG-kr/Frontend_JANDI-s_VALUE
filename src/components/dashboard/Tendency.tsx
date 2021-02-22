@@ -1,7 +1,7 @@
-import React, { useEffect, useMemo, useState } from 'react';
+import React, { useMemo } from 'react';
 import SearchIcon from 'assets/icons/search.svg';
 import tw from 'twin.macro';
-import { ITendency, TendencyType } from '../../models/DashboardModel';
+import { ITendency, TendencyType } from 'models/DashboardModel';
 import Dawn from 'assets/images/dawn.png';
 import Morning from 'assets/images/morning.png';
 import Night from 'assets/images/night.png';

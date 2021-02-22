@@ -1,6 +1,6 @@
-import React, { useEffect, useMemo } from 'react';
+import React, { useMemo } from 'react';
 import { Bar } from '@ant-design/charts';
-import { IAnalyticsAsContribution } from '../../../models/DashboardModel';
+import { IAnalyticsAsContribution } from 'models/DashboardModel';
 import { BarConfig } from '@ant-design/charts/es/bar';
 
 interface IAnalyticsAsContributionProps {

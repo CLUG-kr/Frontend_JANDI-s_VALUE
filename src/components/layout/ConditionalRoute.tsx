@@ -1,8 +1,6 @@
 import React, { useEffect } from 'react';
 import { Redirect, Route } from 'react-router-dom';
 import { RouteProps } from 'react-router';
-import { message } from 'antd';
-import { useLocalStorage } from '@rehooks/local-storage';
 
 const ConditionalRoute: React.FC<
   RouteProps & {

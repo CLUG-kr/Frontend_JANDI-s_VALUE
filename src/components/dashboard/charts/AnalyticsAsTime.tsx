@@ -1,6 +1,6 @@
 import React, { useMemo } from 'react';
 import { Line } from '@ant-design/charts';
-import { IAnalyticsTime } from '../../../models/DashboardModel';
+import { IAnalyticsTime } from 'models/DashboardModel';
 
 interface IAnalyticsAsTimeProps {
   data: IAnalyticsTime[];

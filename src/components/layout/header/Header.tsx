@@ -1,8 +1,8 @@
 import styled from '@emotion/styled';
-import React, { useCallback } from 'react';
+import React from 'react';
 import Logo from 'assets/images/logo.svg';
 import tw from 'twin.macro';
-import { IProfile } from '../../../models/DashboardModel';
+import { IProfile } from 'models/DashboardModel';
 import { Avatar, Button, Tooltip } from 'antd';
 import Title from 'antd/es/typography/Title';
 import { LogoutOutlined, SwapOutlined } from '@ant-design/icons';
@@ -51,14 +51,14 @@ const Header: React.FC<IHeaderProps> = ({ profile, repository }) => {
     '',
   );
 
-  const changeRepository = useCallback(() => {
+  const changeRepository = () => {
     history.replace('/repo_selection');
-  }, [history]);
+  };
 
-  const signOut = useCallback(() => {
+  const signOut = () => {
     setAccessToken('');
     history.replace('/intro');
-  }, [history]);
+  };
 
   return (
     <>

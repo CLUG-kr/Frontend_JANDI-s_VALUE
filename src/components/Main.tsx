@@ -8,7 +8,6 @@ import ConditionalRoute from 'components/layout/ConditionalRoute';
 import { useLocalStorage } from '@rehooks/local-storage';
 import { message } from 'antd';
 import RepoSelection from 'components/intro/RepoSelection';
-import Dashboard from 'components/dashboard/Dashboard';
 import DashboardContainer from 'components/dashboard/DashboardContainer';
 
 const Main: React.FC = () => {

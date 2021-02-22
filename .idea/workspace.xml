@@ -5,9 +5,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="427c3196-0df9-49b1-ba76-998d4188cd94" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/models/AuthModel.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Main.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Main.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/intro/RepoSelection.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/intro/RepoSelection.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/dashboard/Analytics.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/dashboard/Analytics.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/dashboard/Dashboard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/dashboard/Dashboard.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/dashboard/DashboardContainer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/dashboard/DashboardContainer.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/dashboard/History.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/dashboard/History.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/dashboard/Tendency.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/dashboard/Tendency.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/dashboard/charts/AnalyticsAsContribution.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/dashboard/charts/AnalyticsAsContribution.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/dashboard/charts/AnalyticsAsDay.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/dashboard/charts/AnalyticsAsDay.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/dashboard/charts/AnalyticsAsLanguage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/dashboard/charts/AnalyticsAsLanguage.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/dashboard/charts/AnalyticsAsTime.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/dashboard/charts/AnalyticsAsTime.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/layout/header/Header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/layout/header/Header.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/oauth/AuthData.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/oauth/AuthData.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/oauth/SignIn.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/oauth/SignIn.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tsconfig.path.json" beforeDir="false" afterPath="$PROJECT_DIR$/tsconfig.path.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -82,6 +95,9 @@
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="es6.move.members.recent.items">
+      <recent name="$PROJECT_DIR$/src/oauth/AuthModel.ts" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/models" />
       <recent name="$PROJECT_DIR$/src/types" />
@@ -106,6 +122,7 @@
       <workItem from="1613670796185" duration="523000" />
       <workItem from="1613813153726" duration="283000" />
       <workItem from="1613827796229" duration="13796000" />
+      <workItem from="1613991295824" duration="451000" />
     </task>
     <servers />
   </component>
@@ -123,6 +140,12 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="593" y="239" width="595" height="522" key="find.popup" timestamp="1613991744338">
+      <screen x="0" y="25" width="1680" height="956" />
+    </state>
+    <state x="593" y="239" width="595" height="522" key="find.popup/0.25.1680.956@0.25.1680.956" timestamp="1613991744338" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

@@ -1,7 +1,7 @@
 import React from 'react';
 import Header from 'components/layout/header/Header';
 import { Divider } from 'antd';
-import { IDashboardData } from '../../models/DashboardModel';
+import { IDashboardData } from 'models/DashboardModel';
 import History from 'components/dashboard/History';
 import styled from '@emotion/styled';
 import Tendency from 'components/dashboard/Tendency';

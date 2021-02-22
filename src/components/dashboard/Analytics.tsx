@@ -1,5 +1,5 @@
 import React from 'react';
-import { IAnalytics } from '../../models/DashboardModel';
+import { IAnalytics } from 'models/DashboardModel';
 import AnalyticsAsDay from 'components/dashboard/charts/AnalyticsAsDay';
 import AnalyticsAsLanguage from 'components/dashboard/charts/AnalyticsAsLanguage';
 import tw from 'twin.macro';

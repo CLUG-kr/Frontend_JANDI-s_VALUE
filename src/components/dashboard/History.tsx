@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from '@emotion/styled';
 import tw from 'twin.macro';
-import { IHistory } from '../../models/DashboardModel';
+import { IHistory } from 'models/DashboardModel';
 
 interface IHistoryProps {
   history: IHistory;

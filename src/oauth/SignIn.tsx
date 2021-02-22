@@ -1,8 +1,8 @@
 import React, { useEffect } from 'react';
 import { toQuery } from 'utils/url';
-import { ISignInProps } from 'oauth/AuthData';
+import { ISignInData } from 'models/AuthModel';
 
-const SignIn: React.FC<Partial<ISignInProps>> = ({
+const SignIn: React.FC<Partial<ISignInData>> = ({
   clientId,
   scope,
   redirectUri,

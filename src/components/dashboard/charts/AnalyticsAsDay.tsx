@@ -1,7 +1,7 @@
 import React, { useMemo } from 'react';
 import { Column } from '@ant-design/charts';
 import { ColumnConfig } from '@ant-design/charts/es/column';
-import { IAnalyticsAsDay } from '../../../models/DashboardModel';
+import { IAnalyticsAsDay } from 'models/DashboardModel';
 
 interface IAnalyticsAsDayProps {
   data: IAnalyticsAsDay[];

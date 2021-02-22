@@ -1,10 +1,6 @@
-export interface ISignInProps {
-  clientId: string;
-  scope: string;
-  redirectUri: string;
-}
+import { ISignInData } from 'models/AuthModel';
 
-export const SignInData: Partial<ISignInProps> = {
+export const SignInData: Partial<ISignInData> = {
   clientId: '0b05ada88d3a8667fccf',
   redirectUri: 'https://www.jandevelop.com/oauth_redirect',
 };

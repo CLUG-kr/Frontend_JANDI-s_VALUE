@@ -5,7 +5,7 @@ import { useLocalStorage } from '@rehooks/local-storage';
 import axios from 'axios';
 import { SERVER_HOST } from 'utils/network';
 import Dashboard from 'components/dashboard/Dashboard';
-import { IDashboardData } from '../../models/DashboardModel';
+import { IDashboardData } from 'models/DashboardModel';
 import { message, Spin } from 'antd';
 import tw from 'twin.macro';
 
