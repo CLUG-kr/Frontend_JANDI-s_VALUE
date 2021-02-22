@@ -25,6 +25,9 @@
       ],
       "contexts/*": [
         "src/contexts/*"
+      ],
+      "models/*": [
+        "src/models/*"
       ]
     }
   }
