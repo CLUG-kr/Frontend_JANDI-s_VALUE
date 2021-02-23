@@ -102,9 +102,10 @@ const DashboardContainer: React.FC = () => {
           setIsFetching(true);
           const _data = await getData(repository);
           setData(_data);
-          gtag('event', 'UserMetric', {
+          gtag('event', 'enter_dashboard', {
             page_title: window.document.title,
             service_username: _data?.profile.username || 'UNKNOWN',
+            repository: _data?.repository || 'UNKNOWN',
           });
           setIsFetching(false);
         } catch (err) {

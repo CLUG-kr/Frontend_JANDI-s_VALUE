@@ -75,7 +75,6 @@ const RepoSelection: React.FC = () => {
           },
         })
         .then(res => {
-          console.log(res);
           setRepositoryList(res.data.repositories);
         })
         .catch(err => console.log(err));
