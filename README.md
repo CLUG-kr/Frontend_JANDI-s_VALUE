@@ -54,9 +54,7 @@
 
 ## 🛰 Features
 
-### App
-
-#### Authentication
+### Authentication
 
 <div align="center">
     <img src="./src/assets/images/thumbnail_auth.png" />
@@ -76,19 +74,18 @@
 
 ![](./src/assets/images/gif_header_func.gif)
 
-#### Data Analysis
+### Data Analysis
 
-##### Repository Summary
+#### Repository Summary
 
-##### Personalization
+#### Personalization
 
-#### Data Visualization
+### Data Visualization
 
 <div align="center">
     <img src="./src/assets/images/thumbnail_visualization.png" />
 </div>
-
-#### Data Caching
+### Data Caching
 
 This app is running based on GitHub REST API v3. The public API, as everyone knows, has a request **limit**. To maximize that limit, requests are used using **OAuth tokens**, but excessive requests can result in usage restrictions and service disruption.
 
@@ -96,6 +93,19 @@ So, to avoid this, we use **data caching**
 
 - Data that does not need to be **retrieved** are cached as much as possible.
 - Dynamic data everytime changes is **cached and initialized** at regular intervals.
+
+### Cross-platform
+
+#### Supported platforms
+
+- PC with **Modern Browsers** (Not support Internet Explorer 11⬇)
+  - Chrome
+  - Edge
+  - Safari
+  - Firefox
+  - Opera
+- Mobile with every browsers
+  - **Mobile Responsive Design Provided (100% Service Coverage)**
 
 ## 🏎 Getting Started
 
