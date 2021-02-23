@@ -22,11 +22,13 @@
 - React 17
 - Craco for customizing CRA
 - TypeScript
+- RxJS for Reactive Programming
 - node-sass for using SCSS
 - Context API
 - React Router
 - OAuth 2.0 for Access-Token handling
 - Axios for using RESTful API
+- Local Storage
 
 ### Styling
 
