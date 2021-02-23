@@ -58,7 +58,9 @@
 
 <div align="center">
     <img src="./src/assets/images/thumbnail_auth.png" />
+    <img src="./src/assets/images/thumbnail_repo.png" />
 </div>
+
 
 - OAuth 2.0 Token Handling
   - When we toggle `GitHub Login Button`, this app requests authorization information to GitHub.
