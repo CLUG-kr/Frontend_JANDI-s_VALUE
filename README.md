@@ -20,15 +20,14 @@
 ### Core
 
 - React 17
-- Craco for customizing CRA
 - TypeScript
 - RxJS for Reactive Programming
-- node-sass for using SCSS
+- OAuth 2.0 for Access-Token handling
 - Context API
 - React Router
-- OAuth 2.0 for Access-Token handling
 - Axios for using RESTful API
 - Local Storage
+- Craco for customizing CRA
 
 ### Styling
 
@@ -37,6 +36,7 @@
 - twin.macro
 - PostCSS 7
 - autoprefixer
+- node-sass for using SCSS
 
 ### Data Visualization
 
@@ -81,7 +81,32 @@
 
 #### Repository Summary
 
+<div align="center">
+    <img src="./src/assets/images/thumbnail_history.png" />
+</div>
+
+It is difficult to see the summary of the Repository on the existing GitHub homepage. Even in **Insight** provided by GitHub, special commits such as merged commits are counted **as excluded**.
+
+So, we implemented the **server-side** to aggregate and display **actual data** by counting commits **one by one**.
+
+Data provided are today's commits, yesterday's commits, and the total number of contributors.
+
 #### Personalization
+
+<div align="center">
+    <img src="./src/assets/images/thumbnail_personalize.png" />
+</div>
+
+By default, GitHub doesn't tell you the exact time you made a commit. Even if you can check directly using API, it is very **difficult** to see, and **it is difficult to understand the your development tendency**.
+
+We aggregate and analyze the user's contributions logged in to the selected repository to inform **the user's development tendency.**
+
+Currently, only limited analysis is provided, but more analysis data will be provided in the future.
+
+#### Features
+
+- Hourly tendency `✈️Live`
+- Commit size tendency `👷🏼‍♂️Developing`
 
 ### Data Visualization
 
@@ -90,11 +115,22 @@
 </div>
 
 
+Request **all commit data**, aggregate and analyze it from **various aspects** to visualize meaningful data. This allows developers to understand their development tendencies in various aspects.
+
+#### Features
+
+- Contributor score graph `✈️Live`
+- Daily commit tendency graph `✈️Live`
+- Timely commit tendency graph `✈️Live`
+- Language usage tendency graph `✈️Live`
+- Commit quality per commit `👷🏼‍♂️Developing`
+- Ranking system within Jandi's Value users `👷🏼‍♂️Developing`
+
 ### Data Caching
 
 This app is running based on GitHub REST API v3. The public API, as everyone knows, has a request **limit**. To maximize that limit, requests are used using **OAuth tokens**, but excessive requests can result in usage restrictions and service disruption.
 
-So, to avoid this, we use **data caching**
+So, to avoid this, we use **RxJS to caching data**.
 
 - Data that does not need to be **retrieved** are cached as much as possible.
 - Dynamic data everytime changes is **cached and initialized** at regular intervals.
@@ -144,15 +180,17 @@ So, to avoid this, we use **data caching**
 
 - Core
   - Authentication
-    - `src/oauth/AuthData.ts` (Client ID, Client Secret, Rediret URI)
+    - `src/oauth/AuthData.ts` (Client ID, Client Secret, Redirect URI)
 - Styles
   - Background Gradient
+    
     - `src/styles/Common.ts` (emotion css object)
   - Font
+    
     - `src/styles/font.scss`
-  - Theme Overrides
+- Theme Overrides
     - `src/styles/theme-override.scss`
-
+  
     
 
 ## 🐛 Bug Report
