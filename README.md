@@ -102,13 +102,13 @@ So, to avoid this, we use **data caching**
 
 #### Supported platforms
 
-- PC with **Modern Browsers** (Not support Internet Explorer 11⬇)
+- PC with `Modern Browsers` (Not support Internet Explorer 11⬇)
   - Chrome
   - Edge
   - Safari
   - Firefox
   - Opera
-- Mobile with every browsers
+- Mobile with `every browsers`
   - **Mobile Responsive Design Provided (100% Service Coverage)**
 
 ## 🏎 Getting Started
@@ -141,10 +141,10 @@ So, to avoid this, we use **data caching**
 
 ## 😎 Customizing
 
-- Authentication
+- Core
 
-  - `src/oauth/AuthData.ts`
-    - Client ID, Client Secret, Rediret URI
+  - Authentication
+    - `src/oauth/AuthData.ts` (Client ID, Client Secret, Rediret URI)
 
 - Styles
 
