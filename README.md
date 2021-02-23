@@ -68,7 +68,7 @@
 - Conditional Routes (natively functioned)
   - if you are not authenticated, any private routes **can't be accessed.**
   - In root, the conditional routes **prevent** users from `NOT AUTHENTICATED`.
-
+  - 
 - Updating Authentication States
   - After authentication, users can update or renew auth states.
     - Change target repository
@@ -102,13 +102,15 @@ So, to avoid this, we use **data caching**
 
 #### Supported platforms
 
-- PC with `Modern Browsers` (Not support Internet Explorer 11⬇)
+- PC with Modern Browsers (Not support Internet Explorer 11⬇)
   - Chrome
   - Edge
   - Safari
   - Firefox
   - Opera
-- Mobile with `every browsers`
+
+
+- Mobile with every browsers
   - **Mobile Responsive Design Provided (100% Service Coverage)**
 
 ## 🏎 Getting Started
@@ -142,22 +144,14 @@ So, to avoid this, we use **data caching**
 ## 😎 Customizing
 
 - Core
-
   - Authentication
     - `src/oauth/AuthData.ts` (Client ID, Client Secret, Rediret URI)
-
 - Styles
-
   - Background Gradient
-
     - `src/styles/Common.ts` (emotion css object)
-
   - Font
-
     - `src/styles/font.scss`
-
   - Theme Overrides
-
     - `src/styles/theme-override.scss`
 
     
