@@ -6,10 +6,10 @@
 </div>
 ## 🎥 Live Service
 
-- Front-end Live
-  - [https://www.jandevelop.com](https://www.jandevelop.com)
+- **Live Service**
+  - [Go](https://www.jandevelop.com)
 - Beta for testing
-  - []()
+  - [Go](https://frontend-jandi-s-value-git-develop-hoondeveloper.vercel.app/intro)
 
 
 
