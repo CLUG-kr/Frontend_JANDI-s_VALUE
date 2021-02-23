@@ -65,13 +65,9 @@
 - OAuth 2.0 Token Handling
   - When we toggle `GitHub Login Button`, this app requests authorization information to GitHub.
   - Then, we requests `Access Token` to our back-end server.
-
-
 - Conditional Routes (natively functioned)
   - if you are not authenticated, any private routes **can't be accessed.**
   - In root, the conditional routes **prevent** users from `NOT AUTHENTICATED`.
-
-
 - Updating Authentication States
   - After authentication, users can update or renew auth states.
     - Change target repository
@@ -111,7 +107,6 @@ So, to avoid this, we use **data caching**
   - Safari
   - Firefox
   - Opera
-
 - Mobile with every browsers
   - **Mobile Responsive Design Provided (100% Service Coverage)**
 
@@ -148,7 +143,6 @@ So, to avoid this, we use **data caching**
 - Core
   - Authentication
     - `src/oauth/AuthData.ts` (Client ID, Client Secret, Rediret URI)
-
 - Styles
   - Background Gradient
     - `src/styles/Common.ts` (emotion css object)
