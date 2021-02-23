@@ -4,8 +4,16 @@
 <div align="center">
     <img src="./src/assets/images/thumbnail.png" />
 </div>
+## 🎥 Live Service
 
-## Tech stacks
+- Front-end Live
+  - [https://www.jandevelop.com](https://www.jandevelop.com)
+- Beta for testing
+  - []()
+
+
+
+## ✈️ Tech stacks
 
 ### Core
 
@@ -59,7 +67,7 @@
   - if you are not authenticated, any private routes **can't be accessed.**
   - In root, the conditional routes **prevent** users from `NOT AUTHENTICATED`.
 
-- Updateing Authentication States
+- Updating Authentication States
   - After authentication, users can update or renew auth states.
     - Change target repository
     - Sign out && **revoke** `Access Token`
@@ -87,9 +95,35 @@ So, to avoid this, we use **data caching**
 - Data that does not need to be **retrieved** are cached as much as possible.
 - Dynamic data everytime changes is **cached and initialized** at regular intervals.
 
-## Getting Started
+## 🏎 Getting Started
 
-## Customizing
+### Development
+
+1. Clone this repository
+
+   ```bash
+   $ git clone https://github.com/CLUG-kr/Frontend_JANDI-s_VALUE.git
+   ```
+
+2. Install node packages with npm
+
+   ```bash
+   $ npm i
+   ```
+
+3. Start developing
+
+   ```bash
+   $ npm run start
+   ```
+
+### Deployment
+
+- Vercel (stable)
+- Netlify (stable)
+- Firebase (stable)
+
+## 😎 Customizing
 
 - Authentication
 
@@ -112,11 +146,11 @@ So, to avoid this, we use **data caching**
 
     
 
-## Bug Report
+## 🐛 Bug Report
 
 [Issues](https://github.com/CLUG-kr/Frontend_JANDI-s_VALUE/issues)
 
-## Contribution Guide
+## 💻 Contribution Guide
 
 ### Pull Request
 
