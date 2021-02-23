@@ -87,6 +87,8 @@
 <div align="center">
     <img src="./src/assets/images/thumbnail_visualization.png" />
 </div>
+
+
 ### Data Caching
 
 This app is running based on GitHub REST API v3. The public API, as everyone knows, has a request **limit**. To maximize that limit, requests are used using **OAuth tokens**, but excessive requests can result in usage restrictions and service disruption.
