@@ -102,11 +102,11 @@ const DashboardContainer: React.FC = () => {
           setIsFetching(true);
           const _data = await getData(repository);
           setData(_data);
-          setIsFetching(false);
-          gtag('event', 'METRIC', {
+          gtag('event', 'UserMetric', {
             page_title: window.document.title,
-            username: data?.profile.username,
+            service_username: _data?.profile.username || 'UNKNOWN',
           });
+          setIsFetching(false);
         } catch (err) {
           message.error('통신 오류가 발생하였습니다.');
           console.error('통신 오류 발생', err);
