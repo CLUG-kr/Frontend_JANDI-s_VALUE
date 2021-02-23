@@ -28,8 +28,7 @@ const History: React.FC<IHistoryProps> = ({ history }) => {
           어제 총 <PrimaryText>{history.yesterday}</PrimaryText>개 커밋 달성
         </span>
         <span css={tw`text-lg`}>
-          일주일 전 오늘은 <PrimaryText>{history.weekAgo}</PrimaryText>개 커밋
-          달성
+          총 <PrimaryText>{history.totalContributor}</PrimaryText>명이 기여함
         </span>
       </div>
     </HistoryWrapper>

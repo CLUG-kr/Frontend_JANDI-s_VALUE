@@ -39,7 +39,7 @@ export interface IAnalyticsAsContribution {
 export interface IHistory {
   today: number;
   yesterday: number;
-  weekAgo: number;
+  totalContributor: number;
 }
 
 export interface IDashboardData {
