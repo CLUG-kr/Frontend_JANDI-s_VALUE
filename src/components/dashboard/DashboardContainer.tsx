@@ -94,24 +94,23 @@ const DashboardContainer: React.FC = () => {
   // Header > Profile
   useEffect(() => {
     if (isRepoAvailable) {
-      (async () => {
-        try {
-          setIsFetching(true);
-          getData(repository).subscribe(_data => {
-            console.log(_data);
-            setData(_data);
-            gtag('event', 'enter_dashboard', {
-              page_title: window.document.title,
-              service_username: _data?.profile.username || 'UNKNOWN',
-              repository: _data?.repository || 'UNKNOWN',
-            });
-            setIsFetching(false);
+      setIsFetching(true);
+      getData(repository).subscribe(
+        _data => {
+          console.log(_data);
+          setData(_data);
+          gtag('event', 'enter_dashboard', {
+            page_title: window.document.title,
+            service_username: _data?.profile.username || 'UNKNOWN',
+            repository: _data?.repository || 'UNKNOWN',
           });
-        } catch (err) {
+          setIsFetching(false);
+        },
+        _ => {
           message.error('통신 오류가 발생하였습니다.');
-          console.error('통신 오류 발생', err);
-        }
-      })();
+          history.replace('/');
+        },
+      );
     }
   }, [isRepoAvailable]);
 
