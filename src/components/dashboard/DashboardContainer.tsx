@@ -3,11 +3,12 @@ import { useHistory } from 'react-router-dom';
 import { useQuery } from 'utils/url';
 import { useLocalStorage } from '@rehooks/local-storage';
 import axios from 'axios';
-import { SERVER_HOST } from 'utils/network';
+import { SERVER_HOST } from 'utils/constants';
 import Dashboard from 'components/dashboard/Dashboard';
 import { IDashboardData } from 'models/DashboardModel';
 import { message, Spin } from 'antd';
 import tw from 'twin.macro';
+import { gtag } from 'utils/usermetric';
 
 const DashboardContainer: React.FC = () => {
   const history = useHistory();
@@ -99,8 +100,13 @@ const DashboardContainer: React.FC = () => {
       (async () => {
         try {
           setIsFetching(true);
-          setData(await getData(repository));
+          const _data = await getData(repository);
+          setData(_data);
           setIsFetching(false);
+          gtag('event', 'METRIC', {
+            page_title: window.document.title,
+            username: data?.profile.username,
+          });
         } catch (err) {
           message.error('통신 오류가 발생하였습니다.');
           console.error('통신 오류 발생', err);

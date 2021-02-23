@@ -5,7 +5,7 @@ import { GithubFilled, RightOutlined } from '@ant-design/icons';
 import { BackgroundGradient } from 'styles/Common';
 import axios from 'axios';
 import { useLocalStorage } from '@rehooks/local-storage';
-import { SERVER_HOST } from 'utils/network';
+import { SERVER_HOST } from 'utils/constants';
 import { Spin } from 'antd';
 import { css } from '@emotion/react';
 import { Link } from 'react-router-dom';

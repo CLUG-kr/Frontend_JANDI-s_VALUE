@@ -6,7 +6,7 @@ import { CLIENT_SECRET, SignInData } from 'oauth/AuthData';
 import { Spin } from 'antd';
 import tw from 'twin.macro';
 import { useLocalStorage, writeStorage } from '@rehooks/local-storage';
-import { SERVER_HOST } from 'utils/network';
+import { SERVER_HOST } from 'utils/constants';
 
 const GitHubAuthRedirect: React.FC = () => {
   const [accessToken] = useLocalStorage<string>('access_token', '');

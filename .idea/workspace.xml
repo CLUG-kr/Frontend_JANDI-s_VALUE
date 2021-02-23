@@ -5,22 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="427c3196-0df9-49b1-ba76-998d4188cd94" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/models/AuthModel.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/utils/usermetric.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/dashboard/Analytics.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/dashboard/Analytics.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/dashboard/Dashboard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/dashboard/Dashboard.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/dashboard/DashboardContainer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/dashboard/DashboardContainer.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/dashboard/History.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/dashboard/History.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/dashboard/Tendency.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/dashboard/Tendency.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/dashboard/charts/AnalyticsAsContribution.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/dashboard/charts/AnalyticsAsContribution.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/dashboard/charts/AnalyticsAsDay.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/dashboard/charts/AnalyticsAsDay.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/dashboard/charts/AnalyticsAsLanguage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/dashboard/charts/AnalyticsAsLanguage.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/dashboard/charts/AnalyticsAsTime.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/dashboard/charts/AnalyticsAsTime.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/layout/header/Header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/layout/header/Header.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/oauth/AuthData.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/oauth/AuthData.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/oauth/SignIn.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/oauth/SignIn.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tsconfig.path.json" beforeDir="false" afterPath="$PROJECT_DIR$/tsconfig.path.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/intro/RepoSelection.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/intro/RepoSelection.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/oauth/GitHubAuthRedirect.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/oauth/GitHubAuthRedirect.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/network.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/constants.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,6 +65,9 @@
     </option>
   </component>
   <component name="ProjectId" id="1oTTFuBXCpoYLP9s84jTVoKxFw1" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="autoscrollFromSource" value="true" />
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -99,11 +95,11 @@
       <recent name="$PROJECT_DIR$/src/oauth/AuthModel.ts" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/assets/images" />
       <recent name="$PROJECT_DIR$/src/models" />
       <recent name="$PROJECT_DIR$/src/types" />
       <recent name="$PROJECT_DIR$/src" />
       <recent name="$PROJECT_DIR$/src/components" />
-      <recent name="$PROJECT_DIR$/src/components/app" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -123,6 +119,7 @@
       <workItem from="1613813153726" duration="283000" />
       <workItem from="1613827796229" duration="13796000" />
       <workItem from="1613991295824" duration="451000" />
+      <workItem from="1614089960391" duration="1799000" />
     </task>
     <servers />
   </component>
@@ -140,12 +137,6 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
-  </component>
-  <component name="WindowStateProjectService">
-    <state x="593" y="239" width="595" height="522" key="find.popup" timestamp="1613991744338">
-      <screen x="0" y="25" width="1680" height="956" />
-    </state>
-    <state x="593" y="239" width="595" height="522" key="find.popup/0.25.1680.956@0.25.1680.956" timestamp="1613991744338" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
