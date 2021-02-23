@@ -47,12 +47,6 @@ const Main: React.FC = () => {
         <Route path="/oauth_redirect">
           <GitHubAuthRedirect />
         </Route>
-        {/*<Route path="/dashboard">*/}
-        {/*  <DashboardContainer />*/}
-        {/*</Route>*/}
-        {/*<Route path="/repo_selection">*/}
-        {/*  <RepoSelection />*/}
-        {/*</Route>*/}
         <ConditionalRoute
           condition={!!accessToken && accessToken !== ''}
           path="/repo_selection"
@@ -72,7 +66,6 @@ const Main: React.FC = () => {
           path="/app"
           redirectPath="/intro"
           condition={!!accessToken && accessToken !== ''}
-          // condition={true}
           onTrue={() => {
             console.log(
               '너네가 그렇게 원하는, 엑-세-스-토-큰이다!!',
