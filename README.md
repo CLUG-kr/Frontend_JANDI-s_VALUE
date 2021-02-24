@@ -54,6 +54,11 @@
 - Vercel
 - Heroku
 
+### User Metric
+
+- Google Analytics 4
+- gtag.js
+
 ## 🛰 Features
 
 ### Authentication
