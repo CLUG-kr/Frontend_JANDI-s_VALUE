@@ -94,7 +94,7 @@ It is difficult to see the summary of the Repository on the existing GitHub home
 
 So, we implemented the **server-side** to aggregate and display **actual data** by counting commits **one by one**.
 
-Data provided are today's commits, yesterday's commits, and the total number of contributors.
+Data provided are today's commits, yesterday's commits, and the total number of contributors. 
 
 #### Personalization
 
